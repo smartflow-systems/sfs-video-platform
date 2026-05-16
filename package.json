@@ -11,7 +11,7 @@
     "agent": "node scripts/sfs-agent-cli.js",
     "sync": "bash scripts/auto-sync.sh",
     "sync:watch": "node scripts/sync-chatgpt-claude.js watch",
-    "build": "echo 'build complete' && exit 0",
+    "build": "next build",
     "test": "echo 'no tests configured' && exit 0",
     "migrate": "prisma migrate dev --name init",
     "studio": "prisma studio",
@@ -22,12 +22,20 @@
     "sync-all": "npm run auto-commit && npm run sync"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.19.0",
     "@prisma/client": "^5.22.0",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-toast": "^1.2.15",
+    "@tailwindcss/postcss": "^4.3.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
+    "autoprefixer": "^10.5.0",
     "axios": "^1.13.4",
     "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "cors": "^2.8.6",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
@@ -35,10 +43,20 @@
     "helmet": "^8.1.0",
     "http-proxy-middleware": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
-    "stripe": "^16.12.0"
+    "lucide-react": "^1.14.0",
+    "next": "^16.2.6",
+    "postcss": "^8.5.14",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "stripe": "^16.12.0",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "prisma": "^5.22.0"
+    "@types/react": "19.2.14",
+    "prisma": "^5.22.0",
+    "typescript": "6.0.3"
   },
   "engines": {
     "node": ">=18"
